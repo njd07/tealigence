@@ -2,6 +2,8 @@
 
 An AI-powered solution that enhances efficiency, transparency, and profitability across the Assam tea value chain. Built for the Tea Research Association hackathon.
 
+🌐 **Live Demo:** [https://tealigence.vercel.app](https://tealigence.vercel.app)
+
 ---
 
 ## 🚀 Quick Start

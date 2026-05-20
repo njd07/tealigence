@@ -2,12 +2,8 @@ fastapi==0.115.12
 uvicorn[standard]==0.34.3
 python-dotenv==1.1.0
 openai==1.82.0
-langchain==0.3.25
-langchain-community==0.3.24
-langchain-huggingface==0.1.2
-scikit-learn
-sentence-transformers==4.1.0
 python-multipart==0.0.20
 pyjwt==2.10.1
 passlib[bcrypt]==1.7.4
 bcrypt==4.3.0
+httpx

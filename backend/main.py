@@ -21,8 +21,6 @@ if os.path.exists(CACHED_FILE):
         CACHED = json.load(f)
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
-CHROMA_DB_DIR = os.path.join(os.path.dirname(__file__), "chroma_db")
-DB_FILE = os.path.join(CHROMA_DB_DIR, "vectorstore.json")
 
 client = OpenAI(base_url="https://openrouter.ai/api/v1", api_key=OPENROUTER_API_KEY)
 
@@ -40,16 +38,15 @@ VISION_MODELS = [
     "nvidia/nemotron-nano-12b-v2-vl:free",
 ]
 
-vectorstore = None
-
-def get_vectorstore():
-    global vectorstore
-    if vectorstore is None:
-        from langchain_huggingface import HuggingFaceEmbeddings
-        from langchain_community.vectorstores import SKLearnVectorStore
-        embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2", model_kwargs={"device": "cpu"})
-        vectorstore = SKLearnVectorStore(embedding=embeddings, persist_path=DB_FILE, serializer="json")
-    return vectorstore
+# Load guidelines text directly (only ~9KB, fits in prompt)
+GUIDELINES_TEXT = ""
+DOCS_DIR = os.path.join(os.path.dirname(__file__), "documents")
+if os.path.isdir(DOCS_DIR):
+    for fname in os.listdir(DOCS_DIR):
+        fpath = os.path.join(DOCS_DIR, fname)
+        if os.path.isfile(fpath):
+            with open(fpath, "r", encoding="utf-8") as f:
+                GUIDELINES_TEXT += f.read() + "\n"
 
 class LoginRequest(BaseModel):
     username: str
@@ -74,14 +71,7 @@ def get_current_user(authorization: str | None = Header(None)):
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    if os.path.exists(DB_FILE):
-        try:
-            get_vectorstore()
-            print("✅ Vectorstore loaded.")
-        except Exception as e:
-            print(f"⚠️ Vectorstore not loaded: {e}")
-    else:
-        print("⚠️ Run 'python init_db.py' first.")
+    print(f"✅ Tealigence API ready. Guidelines loaded: {len(GUIDELINES_TEXT)} chars, Cached responses: {len(CACHED.get('chat', {}))} questions")
     yield
 
 app = FastAPI(title="Tealigence API", version="1.0.0", lifespan=lifespan)
@@ -114,18 +104,9 @@ async def chat(req: ChatRequest, authorization: str | None = Header(None)):
     if req.message.strip() in cached_chat:
         return {"response": cached_chat[req.message.strip()]}
 
-    context_text = ""
-    try:
-        vs = get_vectorstore()
-        results = vs.similarity_search(req.message, k=3)
-        if results:
-            context_text = "\n\n".join([doc.page_content for doc in results])
-    except Exception:
-        pass
-
     prompt = SYSTEM_PROMPT
-    if context_text:
-        prompt += f"\n\nRelevant knowledge:\n{context_text}"
+    if GUIDELINES_TEXT:
+        prompt += f"\n\nTea Research Association Knowledge Base:\n{GUIDELINES_TEXT[:6000]}"
 
     messages = [{"role": "system", "content": prompt}]
     for msg in req.history[-6:]:

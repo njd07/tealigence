@@ -135,7 +135,7 @@ async def chat(req: ChatRequest, authorization: str | None = Header(None)):
     last_error = None
     start_time = time.time()
     for model in CHAT_MODELS:
-        if time.time() - start_time > 20:
+        if time.time() - start_time > 30:
             break
         try:
             response = client.chat.completions.create(model=model, messages=messages, max_tokens=1024, temperature=0.7,
@@ -168,7 +168,7 @@ async def analyze_tea_leaf(file: UploadFile = File(...), authorization: str | No
     last_error = None
     start_time = time.time()
     for model in VISION_MODELS:
-        if time.time() - start_time > 20:
+        if time.time() - start_time > 30:
             break
         try:
             response = client.chat.completions.create(model=model,

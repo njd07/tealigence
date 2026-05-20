@@ -25,8 +25,20 @@ CHROMA_DB_DIR = os.path.join(os.path.dirname(__file__), "chroma_db")
 DB_FILE = os.path.join(CHROMA_DB_DIR, "vectorstore.json")
 
 client = OpenAI(base_url="https://openrouter.ai/api/v1", api_key=OPENROUTER_API_KEY)
-CHAT_MODEL = "google/gemma-4-31b-it:free"
-VISION_MODEL = "google/gemma-4-31b-it:free"
+
+# Fallback model chains — tries each in order until one works
+CHAT_MODELS = [
+    "google/gemma-4-31b-it:free",
+    "deepseek/deepseek-v4-flash:free",
+    "meta-llama/llama-3.3-70b-instruct:free",
+    "qwen/qwen3-coder:free",
+    "nvidia/nemotron-3-super-120b-a12b:free",
+]
+VISION_MODELS = [
+    "google/gemma-4-31b-it:free",
+    "google/gemma-4-26b-a4b-it:free",
+    "nvidia/nemotron-nano-12b-v2-vl:free",
+]
 
 vectorstore = None
 
@@ -120,14 +132,18 @@ async def chat(req: ChatRequest, authorization: str | None = Header(None)):
         messages.append({"role": msg.get("role", "user"), "content": msg.get("content", "")})
     messages.append({"role": "user", "content": req.message})
 
-    try:
-        response = client.chat.completions.create(model=CHAT_MODEL, messages=messages, max_tokens=1024, temperature=0.7,
-            extra_headers={"HTTP-Referer": "https://tealigence.app", "X-Title": "Tealigence"})
-        return {"response": response.choices[0].message.content}
-    except Exception as e:
-        if "429" in str(e) or "rate" in str(e).lower():
-            raise HTTPException(status_code=429, detail="Rate limit reached. Wait and retry.")
-        raise HTTPException(status_code=500, detail=f"AI error: {e}")
+    last_error = None
+    for model in CHAT_MODELS:
+        try:
+            response = client.chat.completions.create(model=model, messages=messages, max_tokens=1024, temperature=0.7,
+                extra_headers={"HTTP-Referer": "https://tealigence.app", "X-Title": "Tealigence"})
+            return {"response": response.choices[0].message.content}
+        except Exception as e:
+            last_error = e
+            if "429" in str(e) or "rate" in str(e).lower() or "404" in str(e):
+                continue  # Try next model
+            raise HTTPException(status_code=500, detail=f"AI error: {e}")
+    raise HTTPException(status_code=429, detail=f"All models rate-limited. Please wait a minute. Last error: {last_error}")
 
 VISION_PROMPT = """You are a tea quality assessor from the Tea Research Association, Jorhat, Assam.
 Analyze this tea leaf image. Return ONLY a JSON object:
@@ -146,26 +162,30 @@ async def analyze_tea_leaf(file: UploadFile = File(...), authorization: str | No
     contents = await file.read()
     b64 = base64.b64encode(contents).decode("utf-8")
     ct = file.content_type or "image/jpeg"
-    try:
-        response = client.chat.completions.create(model=VISION_MODEL,
-            messages=[{"role": "user", "content": [{"type": "text", "text": VISION_PROMPT},
-                {"type": "image_url", "image_url": {"url": f"data:{ct};base64,{b64}"}}]}],
-            max_tokens=1024, temperature=0.3,
-            extra_headers={"HTTP-Referer": "https://tealigence.app", "X-Title": "Tealigence"})
-        text = response.choices[0].message.content.strip()
+    last_error = None
+    for model in VISION_MODELS:
         try:
-            if text.startswith("```"):
-                text = text.split("\n", 1)[1].rsplit("```", 1)[0]
-            result = json.loads(text)
-        except json.JSONDecodeError:
-            result = {"grade": "Analysis Done", "quality_score": 75, "leaf_appearance": text,
-                "flavor_profile": {"body": "Medium", "briskness": "Medium", "aroma": "See analysis", "notes": "See analysis"},
-                "recommendations": ["See full analysis"], "raw_analysis": text}
-        return {"analysis": result}
-    except Exception as e:
-        if "429" in str(e):
-            raise HTTPException(status_code=429, detail="Rate limit reached.")
-        raise HTTPException(status_code=500, detail=f"Vision error: {e}")
+            response = client.chat.completions.create(model=model,
+                messages=[{"role": "user", "content": [{"type": "text", "text": VISION_PROMPT},
+                    {"type": "image_url", "image_url": {"url": f"data:{ct};base64,{b64}"}}]}],
+                max_tokens=1024, temperature=0.3,
+                extra_headers={"HTTP-Referer": "https://tealigence.app", "X-Title": "Tealigence"})
+            text = response.choices[0].message.content.strip()
+            try:
+                if text.startswith("```"):
+                    text = text.split("\n", 1)[1].rsplit("```", 1)[0]
+                result = json.loads(text)
+            except json.JSONDecodeError:
+                result = {"grade": "Analysis Done", "quality_score": 75, "leaf_appearance": text,
+                    "flavor_profile": {"body": "Medium", "briskness": "Medium", "aroma": "See analysis", "notes": "See analysis"},
+                    "recommendations": ["See full analysis"], "raw_analysis": text}
+            return {"analysis": result}
+        except Exception as e:
+            last_error = e
+            if "429" in str(e) or "rate" in str(e).lower() or "404" in str(e):
+                continue
+            raise HTTPException(status_code=500, detail=f"Vision error: {e}")
+    raise HTTPException(status_code=429, detail=f"All vision models rate-limited. Last error: {last_error}")
 
 @app.get("/api/supply-chain")
 async def get_supply_chain_data(authorization: str | None = Header(None)):

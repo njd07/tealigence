@@ -1,0 +1,35 @@
+{
+  "chat": {
+    "How to manage tea mosquito bug?": "🐛 **Tea Mosquito Bug (Helopeltis theivora) Management:**\n\nThe tea mosquito bug is one of the most destructive pests in Assam tea gardens. It causes characteristic **black lesions and curling of young leaves**, leading to significant crop loss.\n\n**Identification:** Look for brownish-green bugs (6-8mm) on tender shoots. Damage appears as dark brown/black spots on young leaves with curled edges.\n\n**Chemical Control:**\n- Apply **Thiamethoxam 25 WG @ 0.2g/litre** as a foliar spray\n- Alternatively, use **Imidacloprid 17.8 SL @ 0.3ml/litre**\n- ⚠️ **Do NOT spray within 7 days of plucking** (pre-harvest interval)\n- Spray early morning or late evening when bugs are most active\n\n**Integrated Management:**\n- Maintain **shade trees** (Albizia species) at 40-50% canopy — reduces pest intensity\n- Practice **regular plucking** to remove infested shoots\n- Encourage natural predators like spiders and ladybird beetles\n- Remove alternate host plants (weeds like Mikania) from garden borders\n\n**Prevention:** Monitor fields weekly during March-October (peak season). Economic threshold is **10% shoot infestation** — spray only when this level is reached.",
+
+    "Best fertilizer schedule for Assam tea?": "🌱 **Recommended Fertilizer Schedule for Assam Tea:**\n\nThe Tea Research Association recommends a **split application** of NPK fertilizers across 3-4 rounds during the growing season.\n\n**Annual Dose per hectare (mature tea):**\n- **Nitrogen (N):** 120-150 kg/ha\n- **Phosphorus (P₂O₅):** 50-60 kg/ha\n- **Potassium (K₂O):** 60-80 kg/ha\n\n**Application Schedule:**\n| Round | Timing | Fertilizer | Rate |\n|-------|--------|-----------|------|\n| 1st | February-March | Urea + SSP + MOP | 40% of annual dose |\n| 2nd | May-June | Urea + MOP | 30% of annual dose |\n| 3rd | August-September | Urea + MOP | 30% of annual dose |\n\n**Key Guidelines:**\n- Apply fertilizer in a **ring** around the bush drip line, not at the base\n- Apply **after rain or irrigation** for better absorption\n- For acidic soils (pH < 4.5), apply **Dolomitic limestone @ 2-4 tonnes/ha** every 3 years\n- Include **Zinc Sulphate @ 10 kg/ha** annually for micronutrient support\n- For organic gardens, use **Neem cake + Vermicompost** as base, supplemented with bio-fertilizers\n\n**Soil Testing:** Get soil tested every year at a TRA-approved lab to fine-tune dosage.",
+
+    "What is the ideal soil pH?": "🧪 **Ideal Soil pH for Assam Tea Cultivation:**\n\nTea (Camellia sinensis var. assamica) thrives in **acidic soils with pH between 4.5 and 5.5**. This is the optimal range recommended by the Tea Research Association.\n\n**Why pH matters:**\n- At pH 4.5-5.5, essential nutrients like **Nitrogen, Phosphorus, and Potassium** are most available to tea roots\n- **Aluminum toxicity** occurs below pH 4.0, causing root damage\n- Above pH 6.0, **iron and manganese deficiency** appears (yellowing of young leaves)\n\n**Corrective Measures:**\n\n| Condition | pH Range | Action |\n|-----------|----------|--------|\n| Too acidic | Below 4.5 | Apply **Dolomitic limestone @ 2-4 tonnes/ha** |\n| Optimal | 4.5 - 5.5 | No correction needed |\n| Too alkaline | Above 5.5 | Apply **Aluminium sulphate** or **Sulphur @ 500-1000 kg/ha** |\n\n**Testing Protocol:**\n- Collect soil samples from **15-30 cm depth** (root zone)\n- Sample during **November-January** (dormant season)\n- Test at 3-4 representative spots per section\n- Retest every **12 months** to track changes\n\n**Tip:** Organic mulching with tea prunings naturally helps maintain acidic pH over time.",
+
+    "How to improve CTC tea quality?": "☕ **Improving CTC (Crush-Tear-Curl) Tea Quality:**\n\n**1. Plucking Standards (Most Critical):**\n- Practice **fine plucking**: 2 leaves + 1 bud only\n- Avoid coarse leaves — they increase fibre and reduce briskness\n- Pluck at **7-day intervals** during peak season\n- Never pluck wet leaves — causes dark liquor and off-flavours\n\n**2. Withering:**\n- Target **68-72% wither** for optimal moisture removal\n- Wither for **14-18 hours** at 25-30°C\n- Physical wither should be 30-40% weight loss\n- Chemical wither is complete when leaves feel soft and fold without cracking\n\n**3. CTC Processing:**\n- Maintain CTC rollers with **sharp teeth** — dull teeth cause excessive cell damage\n- Ensure proper **rotorvane pressure** for uniform maceration\n- Fermentation temperature: **24-28°C** for 60-90 minutes\n- Monitor fermentation by **colour change** — from green to coppery brown\n\n**4. Drying:**\n- Dryer inlet temperature: **120-130°C**\n- Outlet temperature: **90-95°C**\n- Final moisture content: **2.5-3.5%** (critical for shelf life)\n\n**5. Sorting & Grading:**\n- Use proper mesh sizes for grades: BP, BOP, PF, PD, Dust\n- Remove **stalk and fibre** using electrostatic separators\n- Store in moisture-proof packaging within 24 hours of drying\n\n**Quick Win:** Focus on plucking standards — this alone improves quality by 40-50%."
+  },
+  "sample_image": {
+    "grade": "BP (Broken Pekoe) / BOP (Broken Orange Pekoe)",
+    "grade_description": "Assam CTC tea with granular, pellet-like structure. High uniformity with minor irregular leaf fragments. Classified as BP/BOP grade based on particle size and visual consistency.",
+    "quality_score": 82,
+    "leaf_appearance": "Dark brown to black granular pellets with high uniformity. Minor irregular leaf fragments detected. Particle shape consistent with standard CTC processing.",
+    "color_assessment": "Dark brown to black coloration indicating proper fermentation and drying. Even color distribution suggests consistent processing.",
+    "flavor_profile": {
+      "body": "Strong/Robust — High Intensity",
+      "briskness": "High — characteristic of quality CTC",
+      "aroma": "Malty — High Intensity",
+      "notes": "Rich dark liquor yield, strong malty character typical of premium Assam CTC"
+    },
+    "processing_type": "CTC (Crush-Tear-Curl)",
+    "recommendations": [
+      "Maintain current CTC roller sharpness for consistent pellet formation",
+      "Minor irregular fragments suggest slight optimization of the sorting mesh could improve grade uniformity",
+      "Store in moisture-proof packaging — target moisture below 3.5% for optimal shelf life",
+      "Suitable for export markets (UK, Russia) — meets EU MRL compliance standards"
+    ],
+    "market_value": "Premium",
+    "scan_id": "QA-TEST-001",
+    "confidence_score_pct": 94.5,
+    "tea_type": "Assam CTC"
+  }
+}

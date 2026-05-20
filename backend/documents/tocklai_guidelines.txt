@@ -1,0 +1,184 @@
+TOCKLAI TEA RESEARCH INSTITUTE — COMPREHENSIVE GUIDELINES FOR ASSAM TEA CULTIVATION
+======================================================================================
+
+Published by: Tea Research Association (TRA), Tocklai Tea Research Institute, Jorhat, Assam
+Reference Guide for Tea Planters, Garden Managers, and Field Workers
+
+SECTION 1: SOIL MANAGEMENT
+---------------------------
+Optimal soil pH for Assam tea is between 4.5 and 5.5. Tea plants thrive in acidic soils.
+If soil pH drops below 4.5, apply dolomitic limestone at the rate of 2-4 tonnes per hectare.
+If soil pH rises above 5.5, apply aluminum sulfate at 500 kg per hectare to restore acidity.
+Soil must have deep drainage (minimum 2 meters depth) to prevent waterlogging during monsoons.
+Sandy loam to clay loam soils with good organic matter content (minimum 2%) are ideal.
+Apply organic matter (compost, green manure) annually at 10-15 tonnes per hectare.
+Conduct soil testing every 6 months from Tocklai-certified laboratories.
+
+Recommended Fertilizer Schedule (per hectare per year):
+- Nitrogen (N): 120-160 kg, applied in 4 split doses (March, May, July, September)
+- Phosphorus (P2O5): 40-60 kg, applied once in February
+- Potassium (K2O): 60-80 kg, applied in 2 splits (March and July)
+- Sulphur (S): 30-40 kg annually
+- Zinc Sulphate: 10-15 kg if deficiency symptoms observed
+
+SECTION 2: TEA PLANT VARIETIES AND CLONES
+------------------------------------------
+Tocklai Vegetative (TV) Clones recommended for Assam:
+- TV-1: High yielding, suitable for CTC manufacture, drought tolerant
+- TV-9: Excellent cup quality, suitable for both CTC and Orthodox
+- TV-18: High yielding with good drought tolerance, CTC manufacture
+- TV-20: Superior quality clone, recommended for Orthodox manufacture
+- TV-22: Vigorous growth, high yield, good for CTC
+- TV-23: Best quality clone for Orthodox tea, produces golden tips
+- TV-25: Suitable for organic cultivation, pest resistant
+- TV-26: High yielding, tolerant to blister blight
+
+Assam Jat vs China Jat:
+- Assam Jat: Large leaves, strong malty flavor, suited for CTC processing
+- China Jat: Smaller leaves, delicate flavor, suited for Orthodox and specialty teas
+
+SECTION 3: PEST AND DISEASE MANAGEMENT
+---------------------------------------
+Tea Mosquito Bug (Helopeltis theivora):
+- Symptoms: Black spots on young leaves, curled and deformed shoots
+- Peak season: March-May and September-November
+- Treatment: Localized spraying of Thiamethoxam 25% WG at 0.2 g/litre
+- Safety: Do not spray within 7 days of plucking. Use targeted spraying, not blanket application.
+- Cultural control: Maintain shade at 40-50% canopy cover, remove shade tree prunings
+
+Red Spider Mite (Oligonychus coffeae):
+- Symptoms: Leaves turn coppery brown on upper surface, fine webbing underneath
+- Peak season: Dry hot periods (February-April)
+- Treatment: Spiromesifen 240 SC at 0.8 ml/litre or Fenpyroximate 5% EC at 1 ml/litre
+- Prevention: Maintain adequate shade, avoid water stress, encourage predatory mites
+
+Blister Blight (Exobasidium vexans):
+- Symptoms: Circular blisters on young leaves, white powdery growth underneath
+- Peak season: High humidity periods with frequent rainfall
+- Treatment: Copper Oxychloride 50% WP at 3 g/litre or Hexaconazole 5% EC at 1 ml/litre
+- Spray interval: Every 7-10 days during infection period
+- Prevention: Ensure good air circulation, avoid dense canopy
+
+Looper Caterpillar (Buzura suppressaria):
+- Symptoms: Irregular holes in mature leaves, defoliation
+- Treatment: Quinalphos 25% EC at 2 ml/litre
+- Biological control: Encourage bird population, use pheromone traps
+
+Root Disease (Poria hypolateritia):
+- Symptoms: Yellowing and wilting of bush, white mycelial growth on roots
+- Treatment: Remove infected bush and surrounding soil. Apply Trichoderma viride at 50g per plant
+- Prevention: Avoid waterlogging, maintain proper drainage
+
+SECTION 4: PLUCKING STANDARDS
+-------------------------------
+Fine Plucking: Two leaves and a bud — highest quality, recommended for all premium teas
+Coarse Plucking: Three leaves and a bud — acceptable during peak flush but reduces quality
+Plucking Round: 7-10 days during growing season (March-November)
+Plucking Table: Maintain at 60-75 cm height for optimal yield and quality
+Annual yield target: 2000-3000 kg made tea per hectare for well-maintained gardens
+
+First Flush (March-April): Produces the most aromatic and premium tea
+Second Flush (May-June): Famous for muscatel character, highest commercial value
+Monsoon Flush (July-September): Highest volume but lower quality
+Autumn Flush (October-November): Good body and flavor, moderate quality
+
+SECTION 5: PROCESSING — CTC AND ORTHODOX
+------------------------------------------
+CTC (Crush, Tear, Curl) Processing:
+- Withering: 16-20 hours, moisture reduction to 68-70%
+- CTC Cutting: 3-4 passes through CTC rollers
+- Fermentation: 60-90 minutes at 25-28°C, humidity above 95%
+- Drying: Fluid bed dryer at 100-110°C, final moisture 2-3%
+- CTC Grades: BP, BOP, BPS, PF, PD, CD, D
+
+Orthodox Processing:
+- Withering: 14-18 hours, moisture reduction to 60-65%
+- Rolling: 30-40 minutes in orthodox roller
+- Fermentation: 2-4 hours at 22-26°C
+- Drying: 20-25 minutes at 85-90°C, final moisture 2-3%
+- Orthodox Grades: SFTGFOP, FTGFOP, TGFOP, GFOP, FOP, OP, BOP, FBOP, GOF, FOF, PD, RD
+
+SECTION 6: CLIMATE ADAPTATION
+-------------------------------
+Annual rainfall requirement: 2000-3000 mm, well-distributed throughout the year
+Optimal temperature range: 20-30°C
+Critical temperature: Below 13°C causes dormancy, above 35°C causes heat stress
+Humidity: 70-80% relative humidity is ideal for tea growth
+
+Shade Tree Management:
+- Recommended species: Albizia odoratissima, Albizia lebbeck, Derris robusta
+- Canopy cover: Maintain at 40-50% during growing season
+- Pruning: Annual lopping in December-January
+
+Frost Protection:
+- Vulnerable period: December-February in upper Assam
+- Protection: Smoke screens, overhead sprinkling irrigation
+- Recovery: Light pruning of frost-damaged sections in March
+
+Drought Management:
+- Critical period: February-March before pre-monsoon rains
+- Mulching: Apply at 15-20 cm thickness between rows
+- Irrigation: Drip irrigation at 25-30 litres per bush per week during drought
+
+SECTION 7: STORAGE AND WAREHOUSING
+------------------------------------
+Pre-monsoon humidity above 80% in storage warehouses causes critical fungal spoilage risk for premium Orthodox and CTC grades.
+Optimal storage conditions: Temperature 20-25°C, Humidity below 65%
+Use moisture barriers (polythene-lined plywood chests) for export consignments
+Maximum storage duration: 6 months for CTC, 12 months for Orthodox in proper conditions
+Pest control in warehouses: Monthly fumigation with Aluminium Phosphide tablets
+
+SECTION 8: TEA GRADING STANDARDS
+----------------------------------
+Assam CTC Grades (by particle size):
+- BP (Broken Pekoe): Largest CTC grade, strong liquor
+- BOP (Broken Orange Pekoe): Medium size, brisk and bright
+- BPS (Broken Pekoe Souchong): Slightly coarser grade
+- PF (Pekoe Fannings): Fine grade, quick brewing
+- PD (Pekoe Dust): Very fine, used in tea bags
+- CD (Churamoni Dust): Finest CTC grade
+- D (Dust): Standard dust grade
+
+Assam Orthodox Grades (by leaf size and tip content):
+- SFTGFOP (Super Fine Tippy Golden Flowery Orange Pekoe): Highest grade, abundant golden tips
+- FTGFOP (Fine Tippy Golden Flowery Orange Pekoe): Premium grade with golden tips
+- TGFOP (Tippy Golden Flowery Orange Pekoe): Standard premium grade
+- GFOP (Golden Flowery Orange Pekoe): Good grade with some tips
+- FOP (Flowery Orange Pekoe): Standard whole leaf grade
+- OP (Orange Pekoe): Basic whole leaf grade
+- BOP (Broken Orange Pekoe): Broken leaf grade, brisk liquor
+- FBOP (Flowery Broken Orange Pekoe): Broken with tips
+
+SECTION 9: EXPORT COMPLIANCE
+-------------------------------
+Maximum Residue Limits (MRL) for Major Markets:
+
+European Union (EU):
+- Thiamethoxam: 0.05 mg/kg
+- Spiromesifen: 0.01 mg/kg
+- Copper compounds: 50 mg/kg
+- Hexaconazole: 0.05 mg/kg
+- Quinalphos: 0.01 mg/kg
+
+United States (USA/EPA):
+- Thiamethoxam: 0.1 mg/kg
+- Spiromesifen: 0.05 mg/kg
+- Copper compounds: 70 mg/kg
+- Hexaconazole: 0.1 mg/kg
+- Quinalphos: 0.05 mg/kg
+
+Middle East (Gulf Standards):
+- Thiamethoxam: 0.2 mg/kg
+- Spiromesifen: 0.1 mg/kg
+- Copper compounds: 100 mg/kg
+- Hexaconazole: 0.2 mg/kg
+- Quinalphos: 0.1 mg/kg
+
+SECTION 10: ORGANIC TEA CULTIVATION
+-------------------------------------
+Organic certification requires 3-year conversion period from conventional cultivation.
+Use only approved organic inputs: Neem oil, Karanja oil, Panchagavya, Jeevamrutha
+Biological pest control: Chrysoperla carnea for aphids, Trichoderma for soil pathogens
+Organic fertilization: Apply vermicompost at 5 tonnes/hectare and green manure crops
+Price premium for certified organic Assam tea: 20-40% above conventional prices
+Certification bodies: India Organic (NPOP), USDA Organic, EU Organic, JAS (Japan)

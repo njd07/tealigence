@@ -2,7 +2,7 @@
 Tealigence — FastAPI Backend
 AI-powered solution for the Assam tea value chain.
 """
-import os, base64, json
+import os, base64, json, time
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, UploadFile, File, HTTPException, Header
 from fastapi.middleware.cors import CORSMiddleware
@@ -133,7 +133,10 @@ async def chat(req: ChatRequest, authorization: str | None = Header(None)):
     messages.append({"role": "user", "content": req.message})
 
     last_error = None
+    start_time = time.time()
     for model in CHAT_MODELS:
+        if time.time() - start_time > 20:
+            break
         try:
             response = client.chat.completions.create(model=model, messages=messages, max_tokens=1024, temperature=0.7,
                 extra_headers={"HTTP-Referer": "https://tealigence.app", "X-Title": "Tealigence"})
@@ -141,9 +144,9 @@ async def chat(req: ChatRequest, authorization: str | None = Header(None)):
         except Exception as e:
             last_error = e
             if "429" in str(e) or "rate" in str(e).lower() or "404" in str(e):
-                continue  # Try next model
+                continue
             raise HTTPException(status_code=500, detail=f"AI error: {e}")
-    raise HTTPException(status_code=429, detail=f"All models rate-limited. Please wait a minute. Last error: {last_error}")
+    raise HTTPException(status_code=429, detail="Rate limit reached. Please wait a minute and try again.")
 
 VISION_PROMPT = """You are a tea quality assessor from the Tea Research Association, Jorhat, Assam.
 Analyze this tea leaf image. Return ONLY a JSON object:
@@ -163,7 +166,10 @@ async def analyze_tea_leaf(file: UploadFile = File(...), authorization: str | No
     b64 = base64.b64encode(contents).decode("utf-8")
     ct = file.content_type or "image/jpeg"
     last_error = None
+    start_time = time.time()
     for model in VISION_MODELS:
+        if time.time() - start_time > 20:
+            break
         try:
             response = client.chat.completions.create(model=model,
                 messages=[{"role": "user", "content": [{"type": "text", "text": VISION_PROMPT},
@@ -185,7 +191,7 @@ async def analyze_tea_leaf(file: UploadFile = File(...), authorization: str | No
             if "429" in str(e) or "rate" in str(e).lower() or "404" in str(e):
                 continue
             raise HTTPException(status_code=500, detail=f"Vision error: {e}")
-    raise HTTPException(status_code=429, detail=f"All vision models rate-limited. Last error: {last_error}")
+    raise HTTPException(status_code=429, detail="Rate limit reached. Please wait a minute and try again.")
 
 @app.get("/api/supply-chain")
 async def get_supply_chain_data(authorization: str | None = Header(None)):

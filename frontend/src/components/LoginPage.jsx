@@ -48,7 +48,7 @@ export default function LoginPage() {
           <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center mb-8 border border-white/15">
             <Leaf size={30} className="text-emerald-200" />
           </div>
-          <h1 className="text-5xl font-bold text-white mb-4 leading-tight" style={{fontFamily:'var(--font-serif)'}}>
+          <h1 className="text-5xl font-bold text-white mb-4 leading-tight" style={{ fontFamily: 'var(--font-serif)' }}>
             Tealigence
           </h1>
           <p className="text-lg text-emerald-100/80 leading-relaxed mb-10">
@@ -72,18 +72,18 @@ export default function LoginPage() {
       </div>
 
       {/* Right Panel - Form */}
-      <div className="flex-1 flex items-center justify-center px-5 py-8 sm:p-10 overflow-x-hidden" style={{background:'linear-gradient(160deg,#f8faf8 0%,#f0fdf4 100%)'}}>
+      <div className="flex-1 flex items-center justify-center px-5 py-8 sm:p-10 overflow-x-hidden" style={{ background: 'linear-gradient(160deg,#f8faf8 0%,#f0fdf4 100%)' }}>
         <div className="w-full max-w-md mx-auto">
           {/* Mobile logo (visible only on mobile) */}
           <div className="lg:hidden text-center mb-10">
             <div className="w-14 h-14 rounded-2xl bg-emerald-600 flex items-center justify-center mx-auto mb-4 shadow-lg">
               <Leaf size={24} className="text-white" />
             </div>
-            <h1 className="text-2xl font-bold text-stone-800" style={{fontFamily:'var(--font-serif)'}}>Tealigence</h1>
+            <h1 className="text-2xl font-bold text-stone-800" style={{ fontFamily: 'var(--font-serif)' }}>Tealigence</h1>
             <p className="text-sm text-stone-500 mt-1">AI-Powered Tea Platform</p>
           </div>
 
-          <h2 className="text-2xl font-bold text-stone-800 mb-1" style={{fontFamily:'var(--font-serif)'}}>Welcome back</h2>
+          <h2 className="text-2xl font-bold text-stone-800 mb-1" style={{ fontFamily: 'var(--font-serif)' }}>Welcome back</h2>
           <p className="text-sm text-stone-500 mb-8">Sign in to access your dashboard</p>
 
           <form onSubmit={handleLogin} className="space-y-5">
@@ -122,7 +122,7 @@ export default function LoginPage() {
             Create New Account <ArrowRight size={14} />
           </Link>
 
-          <p className="text-center text-xs text-stone-400 mt-8">Tea Research Association © 2025</p>
+          <p className="text-center text-xs text-stone-400 mt-8">Tea Research Association © 2026</p>
         </div>
       </div>
     </div>

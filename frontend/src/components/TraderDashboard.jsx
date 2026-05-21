@@ -46,26 +46,26 @@ export default function TraderDashboard() {
         </div>
 
         {/* KPI Cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6 animate-fade-in-up delay-100">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 mb-8 animate-fade-in-up delay-100">
           {[
             { label: 'Avg CTC Price', value: '₹268/kg', change: '+5.2%', up: true },
             { label: 'Avg Orthodox', value: '₹414/kg', change: '+3.8%', up: true },
             { label: 'Export Volume', value: '9,500 MT', change: '-1.2%', up: false },
             { label: 'Compliance', value: '92.6%', change: '+0.4%', up: true },
           ].map((kpi, i) => (
-            <div key={i} className="glass-card-strong px-5 py-4">
-              <p className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 mb-1">{kpi.label}</p>
-              <p className="text-xl font-bold text-stone-800">{kpi.value}</p>
-              <span className={`text-xs font-semibold ${kpi.up ? 'text-emerald-600' : 'text-red-500'}`}>{kpi.change}</span>
+            <div key={i} className="glass-card-strong px-5 sm:px-6 py-5 sm:py-6">
+              <p className="text-[11px] uppercase tracking-wider font-semibold text-stone-400 mb-2">{kpi.label}</p>
+              <p className="text-2xl font-bold text-stone-800">{kpi.value}</p>
+              <span className={`text-sm font-semibold ${kpi.up ? 'text-emerald-600' : 'text-red-500'}`}>{kpi.change}</span>
             </div>
           ))}
         </div>
 
         {/* Charts Row 1 */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 mb-8">
           {/* Price Trends */}
-          <div className="lg:col-span-2 glass-card-strong p-6 animate-fade-in-up delay-200">
-            <h3 className="section-title"><TrendingUp size={16} className="text-emerald-600" /> GTAC Price Trends (₹/kg)</h3>
+          <div className="lg:col-span-2 glass-card-strong p-6 sm:p-8 animate-fade-in-up delay-200">
+            <h3 className="section-title mb-4"><TrendingUp size={18} className="text-emerald-600" /> GTAC Price Trends (₹/kg)</h3>
             <div className="h-[280px] mt-2">
               <ResponsiveContainer width="100%" height="100%">
                 <AreaChart data={priceData}>
@@ -97,8 +97,8 @@ export default function TraderDashboard() {
           </div>
 
           {/* Risk Distribution */}
-          <div className="glass-card-strong p-6 animate-fade-in-up delay-300">
-            <h3 className="section-title"><AlertTriangle size={16} className="text-amber-500" /> Spoilage Risk</h3>
+          <div className="glass-card-strong p-6 sm:p-8 animate-fade-in-up delay-300">
+            <h3 className="section-title mb-4"><AlertTriangle size={18} className="text-amber-500" /> Spoilage Risk</h3>
             <div className="h-[240px]">
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
@@ -114,8 +114,8 @@ export default function TraderDashboard() {
         </div>
 
         {/* Export Compliance */}
-        <div className="glass-card-strong p-6 animate-fade-in-up delay-400">
-          <h3 className="section-title"><ShieldCheck size={16} className="text-emerald-600" /> Export Compliance by Market</h3>
+        <div className="glass-card-strong p-6 sm:p-8 animate-fade-in-up delay-400">
+          <h3 className="section-title mb-4"><ShieldCheck size={18} className="text-emerald-600" /> Export Compliance by Market</h3>
           <div className="h-[260px] mt-2">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={exportData} barGap={8}>

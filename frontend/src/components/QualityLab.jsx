@@ -32,14 +32,14 @@ export default function QualityLab() {
     const progressInterval = setInterval(() => {
       setProgress(prev => {
         if (prev >= 90) { clearInterval(progressInterval); return 90 }
-        return prev + Math.random() * 15
+        return prev + Math.random() * 8
       })
-    }, 400)
+    }, 600)
 
     try {
       const data = await analyzeTeaLeaf(file)
-      // Ensure minimum 3 second analysis time for visual effect
-      await new Promise(r => setTimeout(r, 2500))
+      // Ensure minimum 8 second analysis time for visual effect
+      await new Promise(r => setTimeout(r, 7000))
       clearInterval(progressInterval)
       setProgress(100)
       await new Promise(r => setTimeout(r, 300))

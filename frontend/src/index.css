@@ -222,26 +222,26 @@ body {
 }
 .page-header h1 {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #1c1917;
   line-height: 1.2;
 }
 .page-header p {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #78716c;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 /* ── Section Label ──────────────────────────── */
 .section-title {
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #292524;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 /* ── Input Fields ───────────────────────────── */

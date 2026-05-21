@@ -111,7 +111,7 @@ export default function FarmerAdvisory() {
     try {
       const data = await sendChatMessage(msg, messages.map(m => ({ role: m.role, content: m.content })))
       // Simulate thinking delay for cached responses (feels more real)
-      await new Promise(r => setTimeout(r, 1500 + Math.random() * 1500))
+      await new Promise(r => setTimeout(r, 5000 + Math.random() * 2000))
       setMessages(prev => [...prev, { role: 'assistant', content: data.response }])
     } catch (err) {
       setError(err.message)

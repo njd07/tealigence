@@ -55,7 +55,7 @@ Open **http://localhost:5173** → Login with `admin` / `admin`
 - User asks a question about tea cultivation
 - System searches the vectorized Tocklai guidelines document for relevant context
 - Context + question are sent to Google Gemma 4 (via OpenRouter) for an informed answer
-- 4 preset questions are cached for instant demo responses
+- 4 preset questions are cached for demo responses
 
 **Key topics:** Soil pH management, pest control (tea mosquito bug, red spider mite, blister blight), fertilizer schedules, CTC/Orthodox processing, plucking standards, shade management.
 
@@ -66,7 +66,7 @@ Open **http://localhost:5173** → Login with `admin` / `admin`
 - User uploads/drops a tea leaf photo
 - Image is sent to Google Gemma 4 vision model for multimodal analysis
 - Returns: tea grade (TGFOP, BOP, PF, etc.), quality score (0-100), flavor profile, processing type, and market value
-- `sample_image.jpg` has a cached response for reliable demo
+- You can use the `sample_image.jpg`  for a reliable demo
 
 **Output includes:** Grade classification, quality score ring, flavor profile (body, briskness, aroma), recommendations.
 
@@ -161,8 +161,8 @@ Tealigence/
 
 ## 🎯 Demo Tips
 
-1. **Chatbot:** Click the 4 preset questions — they have instant cached responses
-2. **Quality Lab:** Upload `sample_image.jpg` — returns a detailed cached analysis instantly
+1. **Chatbot:** You can ask any question from your side or you can click the 4 preset questions
+2. **Quality Lab:** Upload `sample_image.jpg` or any tea leaf image— returns a detailed analysis instantly
 3. **Weather:** Shows live data — the "LIVE" badge confirms real-time API connection
 4. **Default Login:** `admin` / `admin`
 

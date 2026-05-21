@@ -137,9 +137,9 @@ Analyze this tea leaf image. Return ONLY a JSON object:
 async def analyze_tea_leaf(file: UploadFile = File(...), authorization: str | None = Header(None)):
     get_current_user(authorization)
 
-    # Check if it's the sample image — return cached result
-    fname = (file.filename or "").lower()
-    if "sample" in fname and CACHED.get("sample_image"):
+    # Check if it's the exact sample image — return cached result
+    fname = (file.filename or "").lower().strip()
+    if fname == "sample_image.jpg" and CACHED.get("sample_image"):
         await file.read()  # consume the upload
         return {"analysis": CACHED["sample_image"]}
 

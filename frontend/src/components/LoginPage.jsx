@@ -72,8 +72,8 @@ export default function LoginPage() {
       </div>
 
       {/* Right Panel - Form */}
-      <div className="flex-1 flex items-center justify-center p-6 sm:p-10" style={{background:'linear-gradient(160deg,#f8faf8 0%,#f0fdf4 100%)'}}>
-        <div className="w-full max-w-md">
+      <div className="flex-1 flex items-center justify-center px-5 py-8 sm:p-10 overflow-x-hidden" style={{background:'linear-gradient(160deg,#f8faf8 0%,#f0fdf4 100%)'}}>
+        <div className="w-full max-w-md mx-auto">
           {/* Mobile logo (visible only on mobile) */}
           <div className="lg:hidden text-center mb-10">
             <div className="w-14 h-14 rounded-2xl bg-emerald-600 flex items-center justify-center mx-auto mb-4 shadow-lg">

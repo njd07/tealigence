@@ -35,15 +35,15 @@ export default function Layout() {
             </div>
 
             {/* Desktop nav */}
-            <div className="hidden lg:flex items-center gap-1 ml-8">
+            <div className="hidden lg:flex items-center gap-2 ml-8">
               {navItems.map(({ to, label, icon: Icon }) => (
                 <NavLink key={to} to={to}
                   className={({ isActive }) =>
-                    `flex items-center gap-2 px-3.5 py-2 rounded-lg text-[13px] font-medium transition-all duration-200 ${
+                    `flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
                       isActive ? 'bg-white/20 text-white shadow-sm' : 'text-white/70 hover:bg-white/10 hover:text-white'
                     }`
                   }>
-                  <Icon size={15} /><span>{label}</span>
+                  <Icon size={16} /><span>{label}</span>
                 </NavLink>
               ))}
             </div>

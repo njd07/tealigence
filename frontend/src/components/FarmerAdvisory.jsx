@@ -129,29 +129,29 @@ export default function FarmerAdvisory() {
   return (
     <div className="h-[calc(100vh-64px)] flex flex-col" style={{background:'linear-gradient(180deg,#f0fdf4 0%,#f8faf8 100%)'}}>
       {/* Header */}
-      <div className="px-5 sm:px-8 py-4 border-b border-emerald-100/60" style={{background:'rgba(255,255,255,0.7)',backdropFilter:'blur(12px)'}}>
-        <div className="max-w-3xl mx-auto flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center shrink-0">
-            <Bot size={20} className="text-emerald-700" />
+      <div className="px-5 sm:px-8 py-5 border-b border-emerald-100/60" style={{background:'rgba(255,255,255,0.7)',backdropFilter:'blur(12px)'}}>
+        <div className="max-w-4xl mx-auto flex items-center gap-3">
+          <div className="w-11 h-11 rounded-xl bg-emerald-100 flex items-center justify-center shrink-0">
+            <Bot size={22} className="text-emerald-700" />
           </div>
           <div>
-            <h1 className="text-base font-semibold text-stone-800" style={{fontFamily:'var(--font-serif)'}}>Farmer Advisory</h1>
-            <p className="text-xs text-stone-500 mt-0.5">Powered by Tea Research Association Knowledge Base • RAG AI</p>
+            <h1 className="text-lg font-semibold text-stone-800" style={{fontFamily:'var(--font-serif)'}}>Farmer Advisory</h1>
+            <p className="text-sm text-stone-500 mt-0.5">Powered by Tea Research Association Knowledge Base • RAG AI</p>
           </div>
         </div>
       </div>
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="max-w-3xl mx-auto space-y-7">
+      <div className="flex-1 overflow-y-auto px-4 sm:px-6 lg:px-10 py-6">
+        <div className="max-w-4xl mx-auto space-y-7">
           {messages.map((msg, i) => (
-            <div key={i} className={`flex gap-3 animate-fade-in-up ${msg.role === 'user' ? 'flex-row-reverse' : ''}`}>
-              <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-1 ${
+            <div key={i} className={`flex gap-3.5 animate-fade-in-up ${msg.role === 'user' ? 'flex-row-reverse' : ''}`}>
+              <div className={`w-9 h-9 rounded-full flex items-center justify-center shrink-0 mt-1 ${
                 msg.role === 'user' ? 'bg-amber-100' : 'bg-emerald-100'
               }`}>
-                {msg.role === 'user' ? <User size={14} className="text-amber-700" /> : <Leaf size={14} className="text-emerald-700" />}
+                {msg.role === 'user' ? <User size={16} className="text-amber-700" /> : <Leaf size={16} className="text-emerald-700" />}
               </div>
-              <div className={`max-w-[90%] sm:max-w-[80%] lg:max-w-[75%] px-5 py-4 text-[14px] leading-[1.75] ${
+              <div className={`max-w-[90%] sm:max-w-[82%] lg:max-w-[78%] px-6 py-5 text-[15px] leading-[1.8] ${
                 msg.role === 'user' ? 'chat-bubble-user' : 'chat-bubble-ai'
               }`}>
                 {msg.role === 'assistant' ? <RenderMarkdown text={msg.content} /> : msg.content}
@@ -180,10 +180,10 @@ export default function FarmerAdvisory() {
 
       {/* Suggestions — always visible */}
       <div className="px-5 sm:px-8 pb-3">
-        <div className="max-w-3xl mx-auto flex flex-wrap gap-2">
+        <div className="max-w-4xl mx-auto flex flex-wrap gap-2.5">
           {suggestions.map((s, i) => (
             <button key={i} onClick={() => { setInput(s); inputRef.current?.focus() }}
-              className="px-3.5 py-2 text-xs font-medium bg-white border border-emerald-200 text-emerald-700 rounded-full hover:bg-emerald-50 hover:border-emerald-300 transition-all shadow-sm">
+              className="px-4 py-2.5 text-sm font-medium bg-white border border-emerald-200 text-emerald-700 rounded-full hover:bg-emerald-50 hover:border-emerald-300 transition-all shadow-sm">
               {s}
             </button>
           ))}
@@ -191,13 +191,13 @@ export default function FarmerAdvisory() {
       </div>
 
       {/* Input Bar */}
-      <div className="px-5 sm:px-8 py-4 border-t border-emerald-100/60" style={{background:'rgba(255,255,255,0.8)',backdropFilter:'blur(12px)'}}>
-        <div className="max-w-3xl mx-auto flex gap-3">
+      <div className="px-5 sm:px-8 py-5 border-t border-emerald-100/60" style={{background:'rgba(255,255,255,0.8)',backdropFilter:'blur(12px)'}}>
+        <div className="max-w-4xl mx-auto flex gap-3">
           <textarea id="chat-input" ref={inputRef} value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={handleKeyDown}
             placeholder="Ask about tea cultivation, pest management, soil health..."
-            rows={1} className="input-field flex-1 resize-none !py-3" />
-          <button id="chat-send" onClick={handleSend} disabled={!input.trim() || loading} className="btn-primary !px-4 shrink-0">
-            <Send size={16} />
+            rows={1} className="input-field flex-1 resize-none !py-3.5 !text-[15px]" />
+          <button id="chat-send" onClick={handleSend} disabled={!input.trim() || loading} className="btn-primary !px-5 shrink-0">
+            <Send size={18} />
           </button>
         </div>
       </div>
